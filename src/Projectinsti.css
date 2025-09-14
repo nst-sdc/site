@@ -1,0 +1,146 @@
+.project-box {
+  position: relative;
+  top: 100px;
+  width: 77%;
+  margin-left: 11.5%;
+  z-index: 0px;
+  margin-bottom: 150px;
+}
+.project-box-head {
+  width: 100%;
+  height: 144px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 40px;
+}
+.project-logo {
+  height: 100%;
+  width: 672px;
+  display: flex;
+  flex-direction: row;
+}
+.project-link,.project-link-newbee {
+  height: 100%;
+  width: 190px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 53px;
+  position: absolute;
+  right: 0;
+}
+
+.project-link-newbee{
+  justify-content: end;
+}
+
+.project-image {
+  height: 100%;
+  width: 144px;
+  border-radius: 24px;
+  background-color: #2d2d2d;
+  margin-right: 32px;
+  z-index: 0px;
+}
+.project-name {
+  /* width: 480px; */
+  height: 64px;
+  margin-top: 40px;
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  color: #f2f2f2;
+}
+.website-link,.website-link-newbee {
+  width: 89px;
+  height: 38px;
+  border: 1px solid #f2f2f2;
+  padding: 8px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #f2f2f2;
+  text-align: center;
+  margin-right: 12px;
+}
+
+.website-link-newbee{
+  margin-right: 0px;
+}
+
+.github-link {
+  width: 89px;
+  height: 38px;
+  border: 1px solid #f2f2f2;
+  padding: 8px;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.78px;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+.project-box-body {
+  width: 100%;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.78px;
+  color: #afb9cc;
+}
+ul li {
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .project-box {
+    top: 120px;
+    margin-left: 6%;
+    width: 88%;
+  }
+  .project-box-head {
+    height: 184px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .project-logo {
+    flex-direction: column;
+  }
+  .project-image {
+    border-radius: 0px;
+    width: 96px;
+    height: 96px;
+    margin: 0px;
+  }
+  .project-name {
+    margin-top: 16px;
+  }
+  .project-link {
+    padding-top: 0px;
+    width: 183px;
+  }
+  .website-link {
+    width: 85px;
+    border: 1px solid #afb9cc;
+    color: #afb9cc;
+    font-weight: 400;
+    margin-right: 24px;
+  }
+  .github-link {
+    width: 74px;
+    border: 1px solid #afb9cc;
+    color: #afb9cc;
+    font-weight: 400;
+  }
+  .project-name {
+    line-height: 72px;
+  }
+}
+
+@media (max-width: 850px){
+  .project-name {
+    font-size: 48px;
+  }
+}

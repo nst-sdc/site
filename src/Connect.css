@@ -1,0 +1,169 @@
+.outer-container {
+  width: 100%;
+  height: 566px;
+  background-color: #090e1a;
+  margin-top: 100px; /* Increased margin to create more space after the Team section */
+  padding-top: 48px;
+  padding-bottom: 24px;
+  clear: both; /* Ensure the footer clears any floated elements */
+}
+.connect-container {
+  width: 77%;
+  border: 1px;
+  margin-left: 11.5%;
+  padding: 0px;
+  height: 494px;
+}
+.connect-section-head {
+  margin: 0px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.connects {
+  width: 94px;
+  height: 38px;
+  border: 1px solid #f2f2f2;
+  padding: 8px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.connect {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #f2f2f2;
+  align-items: center;
+  justify-content: center;
+}
+.connect-section-body {
+  margin: 0px;
+  width: 100%;
+  height: 232px;
+  margin-bottom: 88px;
+}
+.links {
+  width: 31.7%;
+  height: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 19.5%;
+}
+.social-handles {
+  padding: 0px;
+  width: 46.75%;
+  height: 232px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 7.8%;
+}
+.social-media {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #f2f2f2;
+  height: 25%;
+  text-align: left;
+  /*write something to align them centrally in y dirn.*/
+}
+.project-handles {
+  width: 45.45%;
+  padding: 0px;
+  height: 232px;
+  display: flex;
+  flex-direction: column;
+}
+.projects-link {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #f2f2f2;
+  height: 25%;
+}
+a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+.remark-box {
+  width: 48.8%;
+  height: 183px;
+  padding: 0px;
+}
+.remark {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 61.25px;
+  color: #f2f2f2;
+}
+.connect-section-footer {
+  height: 96px;
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.dc-logo {
+  width: 96px;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .outer-container {
+    height: 760px;
+    padding: 0px;
+  }
+  .connect-container {
+    margin-left: 6%;
+    width: 88%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 760px;
+  }
+  .connect-section-head {
+    margin-bottom: 24px;
+  }
+  .connects {
+    border: 1px solid #afb9cc;
+  }
+  .connect {
+    font-weight: 400;
+    color: #afb9cc;
+  }
+  .connect-section-body {
+    margin-bottom: 48px;
+    height: 522px;
+    display: flex;
+    flex-direction: column;
+  }
+  .links {
+    width: 100%;
+    height: 302px;
+    margin-bottom: 64px;
+  }
+  .social-handles,
+  .project-handles {
+    height: 302px;
+    width: 48%;
+  }
+  .social-handles {
+    margin-right: 4%;
+  }
+  .remark-box {
+    width: 100%;
+    height: 156px;
+  }
+  .remark {
+    font-size: 41px;
+    line-height: 52.32px;
+  }
+}
+
+@media (max-width: 850px){
+  .remark {
+    font-size: 36px;
+  }
+}

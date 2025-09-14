@@ -1,0 +1,99 @@
+.team-container {
+  margin-top: 50px;
+  margin-left: 11.5%;
+  width: 77%;
+  margin-bottom: 200px; /* Increased bottom margin to prevent collision with footer */
+  padding: 0px;
+  height: auto; /* Changed to auto to accommodate image size properly */
+}
+.team-section-head {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+}
+.team {
+  width: 66px;
+  height: 38px;
+  border: 1px solid #f2f2f2;
+  padding: 8px;
+  margin-top: 13.5px;
+}
+.teams {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #f2f2f2;
+  align-items: center;
+}
+.team-desc-button-box {
+  padding: 0px;
+  width: 16%;
+  position: absolute;
+  right: 12%;
+}
+.team-desc-button {
+  width: 100%;
+  height: 65px;
+  padding: 10.5% 8% 10.5% 8%;
+  color: #02050a;
+  fill: #f2f2f2;
+  font-size: 17px;
+  font-family: "Space Grotesk";
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+.team-section-body {
+  width: 100%;
+  height: auto; /* Changed to auto to fit content */
+  background-color: #262626;
+  margin: 48px 0px 12px 0px;
+  overflow: hidden; /* Prevent content from spilling out */
+}
+
+/* Add styling for the team image to ensure it fits properly */
+.team-section-body img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove any extra space below the image */
+}
+@media (max-width: 768px) {
+  .team-container {
+    margin-left: 6%;
+    width: 88%;
+    height: auto;
+    margin-bottom: 120px; /* Increased bottom margin on mobile */
+  }
+  .team-section-body {
+    height: auto;
+    margin-top: 24px;
+  }
+  .team-section-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .team-section-head {
+    height: 64px;
+  }
+  .team {
+    margin-top: 13px;
+  }
+  .teams {
+    font-weight: 400;
+  }
+  .team-desc-button-box {
+    width: 46%;
+    right: 6%;
+  }
+  .team-desc-button {
+    height: 64px;
+    line-height: 22px;
+  }
+}
