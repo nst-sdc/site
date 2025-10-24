@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "../../styles/components/NavBar.css";
 import { Link as RouterLink } from "react-router-dom";
-import { Link } from "react-scroll";
 // import DevComLogo from "./DC 3.svg";
 
 function NavBar() {
@@ -38,8 +37,8 @@ function NavBar() {
           style={{ backdropFilter: `blur(${blurAmount}px)` }}
         >
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <span className="title">NST-SDC</span>
+            <a class="navbar-brand" href="/">
+              <span className="title">DevClub NST-Pune</span>
             </a>
             <button
               class="navbar-toggler"

@@ -63,6 +63,92 @@
   flex-wrap: wrap;
   /* justify-content: center; */
 }
+
+/* Grid table styles for core team */
+.core-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  margin-top: 16px;
+  position: relative;
+}
+
+.core-team-grid .member-box {
+  background-color: #0a0a08;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  min-height: 220px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.core-team-grid .member-box:hover {
+  background-color: #1a1a18;
+  transform: scale(1.02);
+}
+
+.core-team-grid .member-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 2px solid #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.core-team-grid .hover-info {
+  position: relative;
+  opacity: 1;
+  background: none;
+  padding: 0;
+  bottom: auto;
+  left: auto;
+  right: auto;
+}
+
+.core-team-grid .member-name {
+  color: #f2f2f2;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.core-team-grid .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.core-team-grid .social-link {
+  color: #afb9cc;
+  transition: color 0.3s ease;
+}
+
+.core-team-grid .social-link:hover {
+  color: #ffffff;
+}
+
+.core-team-grid .logo {
+  width: 20px;
+  height: 20px;
+}
 .plus_icon {
   display: none;
 }
@@ -123,5 +209,38 @@
 @media (max-width: 330px) {
   p.headings{
     font-size: 52px;
+  }
+}
+
+/* Responsive styles for core team grid */
+@media (max-width: 768px) {
+  .core-team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+  }
+  
+  .core-team-grid .member-box {
+    padding: 20px;
+    min-height: 200px;
+  }
+  
+  .core-team-grid .member-img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .core-team-grid .member-name {
+    font-size: 16px;
+  }
+  
+  .core-team-grid .logo {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .core-team-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -16,7 +16,7 @@ function Projectreso() {
         <div className="project-box-head">
           <div className="project-logo">
             <div className="project-image">
-              <img className="project-image" src={resobin}></img>
+              <img className="project-image" src={resobin} alt="ResoBin project logo"></img>
             </div>
             <div className="project-name">
               <p>Resobin</p>

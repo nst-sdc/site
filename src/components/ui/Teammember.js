@@ -4,7 +4,7 @@ import "../../styles/components/Teammember.css";
 function TeamMember({ name, imageSrc, linkedinLink, githubLink }) {
   return (
     <div className="member-box">
-      <img className="member-img" src={imageSrc} alt={`${name}'s image`} />
+      <img className="member-img" src={imageSrc} alt={`${name}`} />
       <div className="hover-info">
         <p className="member-name">{name}</p>
         <div className="social-icons">
