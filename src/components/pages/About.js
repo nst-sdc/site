@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "./About.css";
-import image from "./About_img.png";
-import clrp from "./clrpick.png";
-import ter from "./terminal.png";
+import "../../styles/pages/About.css";
+import image from "../../assets/images/About_img.png";
+import clrp from "../../assets/images/clrpick.png";
+import ter from "../../assets/images/terminal.png";
 
 function About() {
   return (

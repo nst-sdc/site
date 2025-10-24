@@ -1,5 +1,5 @@
 import React from "react";
-import "./Teammember.css";
+import "../../styles/components/Teammember.css";
 
 function TeamMember({ name, imageSrc, linkedinLink, githubLink }) {
   return (

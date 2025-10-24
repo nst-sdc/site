@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Projects.css";
-import resobin from "./ResoBin.png";
-import messi from "./Mess I.png";
-import instiapp from "./InstiApp.png";
-import newbee from "./NewBee.png";
+import "../../styles/pages/Projects.css";
+import resobin from "../../assets/images/ResoBin.png";
+import messi from "../../assets/images/Mess I.png";
+import instiapp from "../../assets/images/InstiApp.png";
+import newbee from "../../assets/images/NewBee.png";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import useElementOnScreen from "./hooks/useElementOnScreen";
+import useElementOnScreen from "../../hooks/useElementOnScreen";
 
 function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "./Projectinsti.css";
-import instiapp from "./InstiApp.png";
+import "../../styles/pages/Projectinsti.css";
+import instiapp from "../../assets/images/InstiApp.png";
 import Connect from "./Connect";
-import NavBar from "./NavBar";
+import NavBar from "../layout/NavBar";
 
 function Projectinsti() {
   useEffect(() => {

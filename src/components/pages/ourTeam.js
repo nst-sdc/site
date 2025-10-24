@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./ourTeam.css";
-import TeamMember from "./Teammember.js";
-import record from "./record.json";
-import plus from "./add.png";
-import close from "./close.png";
-import NavBar from "./NavBar";
+import "../../styles/pages/ourTeam.css";
+import TeamMember from "../ui/Teammember.js";
+import record from "../../assets/data/record.json";
+import plus from "../../assets/images/add.png";
+import close from "../../assets/images/close.png";
+import NavBar from "../layout/NavBar";
 
 function OurTeam() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -19,7 +19,7 @@ function OurTeam() {
   }
 
   const images = importAll(
-    require.context("./members_images", false, /\.(png|jpg|jpeg)$/)
+    require.context("../../assets/images", false, /\.(png|jpg|jpeg)$/)
   );
 
   useEffect(() => {

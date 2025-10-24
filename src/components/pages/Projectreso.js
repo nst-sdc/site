@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "./Projectinsti.css";
+import "../../styles/pages/Projectinsti.css";
 import Connect from "./Connect";
-import NavBar from "./NavBar";
-import resobin from "./ResoBin.png";
+import NavBar from "../layout/NavBar";
+import resobin from "../../assets/images/ResoBin.png";
 
 function Projectreso() {
   useEffect(() => {

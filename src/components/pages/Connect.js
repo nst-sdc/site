@@ -1,6 +1,6 @@
 import React from "react";
-import "./Connect.css";
-import logo from "./DC_logo.png";
+import "../../styles/pages/Connect.css";
+import logo from "../../assets/images/DC_logo.png";
 
 function Connect() {
   return (

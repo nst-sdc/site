@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "./Projectinsti.css";
+import "../../styles/pages/Projectinsti.css";
 import Connect from "./Connect";
-import NavBar from "./NavBar";
-import messi from "./Mess I.png";
+import NavBar from "../layout/NavBar";
+import messi from "../../assets/images/Mess I.png";
 
 function Projectmessi() {
   useEffect(() => {
