@@ -12,14 +12,14 @@ function OurTeam() {
 
   function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => {
+    r.keys().forEach((item, index) => {
       images[item.replace("./", "")] = r(item);
     });
     return images;
   }
 
   const images = importAll(
-    require.context("./", false, /\.(png|jpg|jpeg)$/)
+    require.context("./members_images", false, /\.(png|jpg|jpeg)$/)
   );
 
   useEffect(() => {
@@ -85,9 +85,7 @@ function OurTeam() {
                       name={member.name}
                       imageSrc={
                         member.imagesrc
-                          ? images[
-                              member.imagesrc.replace("./members_images/", "")
-                            ]
+                          ? images[member.imagesrc.replace("./", "")]
                           : null
                       }
                     />

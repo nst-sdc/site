@@ -2,45 +2,45 @@
   "Core Team": [
     {
       "name": "Daksh Saini",
-      "imagesrc": "./members_images/user.jpg",
+      "imagesrc": "./daksh_saini.jpg",
       "linkedinLink": "https://www.linkedin.com/in/daksh-saini-70a68830a/",
-      "githubLink": ""
+      "githubLink": "https://github.com/mrgear111"
     },
     {
       "name": "Arpit Sarang",
-      "imagesrc": "./members_images/user.jpg",
+      "imagesrc": "./arpit_sarang.jpg",
       "linkedinLink": "https://www.linkedin.com/in/arpitsarang/",
-      "githubLink": ""
+      "githubLink": "https://github.com/CodeMaverick-143"
     },
     {
       "name": "Arohi Jadhav",
-      "imagesrc": "./members_images/user.jpg",
+      "imagesrc": "./arohi_jadhav.jpg",
       "linkedinLink": "https://www.linkedin.com/in/arohi-jadhav-178a80340/",
-      "githubLink": ""
+      "githubLink": "https://github.com/Arohi-jd"
     },
     {
       "name": "Vipul Yadav",
-      "imagesrc": "./members_images/user.jpg",
+      "imagesrc": "./vipul_yadav.jpg",
       "linkedinLink": "https://www.linkedin.com/in/vipul-yadav-b0a82231a/",
-      "githubLink": ""
+      "githubLink": "https://github.com/codervipul775"
     },
     {
       "name": "Kanishk Ranjan",
-      "imagesrc": "./members_images/user.jpg",
+      "imagesrc": "./kanishk_ranjan.jpg",
       "linkedinLink": "https://www.linkedin.com/in/kanishkranjan/",
-      "githubLink": ""
+      "githubLink": "https://github.com/KanishkRanjan"
     },
     {
       "name": "Abhay",
-      "imagesrc": "./members_images/user.jpg",
+      "imagesrc": "./abhay.jpg",
       "linkedinLink": "https://www.linkedin.com/in/qubitabhay/",
-      "githubLink": ""
+      "githubLink": "https://github.com/QUBITABHAY"
     },
     {
       "name": "Chiranjeev Agarwal",
-      "imagesrc": "./members_images/user.jpg",
+      "imagesrc": "./chiranjeev_agarwal.jpg",
       "linkedinLink": "https://www.linkedin.com/in/chiranjeev-agarwal-4bb65631a/",
-      "githubLink": ""
+      "githubLink": "https://github.com/CHIRANJEEV1707"
     }
   ]
 }
