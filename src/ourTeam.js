@@ -88,6 +88,8 @@ function OurTeam() {
                           ? images[member.imagesrc.replace("./", "")]
                           : null
                       }
+                      linkedinLink={member.linkedinLink}
+                      githubLink={member.githubLink}
                     />
                   ))}
                 </div>
