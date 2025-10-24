@@ -15,16 +15,16 @@ function Connect() {
         <div className="row connect-section-body">
           <div className="links">
             <div className="social-handles">
-              <div className="social-media Twitter">
-                <a href="https://twitter.com/devcom_iitb">Twitter</a>
-              </div>
-              <div className="social-media Instagram">
-                <a href="https://www.instagram.com/devcom.iitb/">Instagram</a>
-              </div>
               <div className="social-media LinkedIn">
                 <a href="https://www.linkedin.com/company/devcom-iit-bombay/mycompany/">
                   LinkedIn
                 </a>
+              </div>
+              <div className="social-media Discord">
+                <a href="https://discord.gg/devclub-nst">Discord</a>
+              </div>
+              <div className="social-media Instagram">
+                <a href="https://www.instagram.com/devcom.iitb/">Instagram</a>
               </div>
               <div className="social-media Mail">
                 <a href="mailto:devcom@iitb.ac.in">Mail</a>
@@ -47,12 +47,12 @@ function Connect() {
           </div>
           <div className="remark-box">
             <p className="remark">
-              Easing student life at IIT Bombay since 2018
+              Easing student life at NST-Pune since 2024
             </p>
           </div>
         </div>
         <div className="row connect-section-footer">
-          <img className="dc-logo" src={logo} alt="DevCom logo" />
+          <img className="dc-logo" src={logo} alt="DevClub NST-Pune logo" />
         </div>
       </div>
     </div>

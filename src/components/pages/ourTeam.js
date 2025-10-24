@@ -78,7 +78,7 @@ function OurTeam() {
                 )}
               </div>
               {(screenWidth >= 768 || expandedSections[sectionName]) && (
-                <div className="post-holders">
+                <div className={sectionName === "Core Team" ? "core-team-grid" : "post-holders"}>
                   {record[sectionName].map((member, idx) => (
                     <TeamMember
                       key={idx}

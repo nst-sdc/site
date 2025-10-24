@@ -43,7 +43,7 @@ function About() {
             <motion.img
               className="clrpicker_image"
               src={clrp}
-              alt="an image of a color picker"
+              alt="Color picker"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 100 }}
@@ -89,7 +89,7 @@ function About() {
             <motion.img
               className="terminal_image"
               src={ter}
-              alt="an image of a terminal"
+              alt="Terminal"
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 100 }}
@@ -120,7 +120,7 @@ function About() {
           <img
             className="devcom-img"
             src={image}
-            alt="Image describing devcom"
+            alt="DevClub team illustration"
           />
         </motion.div>
       </div>

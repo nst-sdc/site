@@ -36,7 +36,7 @@ function Home() {
       <div className="container Home-page-content">
         <p className="motto">Build Cool</p>
         <p className="motto">Stuff</p>
-        <img className="Home-image" src={imageUrl} alt="keyboard image" />
+        <img className="Home-image" src={imageUrl} alt="Homepage illustration" />
       </div>
     </>
   );

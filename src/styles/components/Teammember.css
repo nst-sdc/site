@@ -25,7 +25,7 @@
   text-align: left;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   padding: 10px 15px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s;
 }
 
