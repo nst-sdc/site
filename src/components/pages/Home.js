@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./Home.css";
-import vector from "./Homepage_vector.png";
-import cube from "./Black cube 2-02 1.png";
-import NavBar from "./NavBar";
+import "../../styles/pages/Home.css";
+import vector from "../../assets/images/Homepage_vector.png";
+import cube from "../../assets/images/Black cube 2-02 1.png";
+import NavBar from "../layout/NavBar";
 
 function Home() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);

@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./styles/global/App.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Homepage from "./Homepage";
-import OurTeam from "./ourTeam";
-import Projectreso from "./Projectreso";
-import Projectinsti from "./Projectinsti";
-import Projectmessi from "./Projectmessi";
-import Projectnewbee from "./Projectnewbee";
+import Homepage from "./components/pages/Homepage";
+import OurTeam from "./components/pages/ourTeam";
+import Projectreso from "./components/pages/Projectreso";
+import Projectinsti from "./components/pages/Projectinsti";
+import Projectmessi from "./components/pages/Projectmessi";
+import Projectnewbee from "./components/pages/Projectnewbee";
 
 function App() {
   useEffect(() => {

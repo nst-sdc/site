@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./NavBar.css";
+import "../../styles/components/NavBar.css";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from "react-scroll";
 // import DevComLogo from "./DC 3.svg";

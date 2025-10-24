@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import "./Projectinsti.css";
+import "../../styles/pages/Projectinsti.css";
 import Connect from "./Connect";
-import NavBar from "./NavBar";
-import newbee from "./NewBee.png";
+import NavBar from "../layout/NavBar";
+import newbee from "../../assets/images/NewBee.png";
 
 function Projectnewbee() {
   useEffect(() => {
