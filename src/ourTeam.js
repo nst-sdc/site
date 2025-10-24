@@ -19,7 +19,7 @@ function OurTeam() {
   }
 
   const images = importAll(
-    require.context("./members_images", false, /\.(jpg|jpeg)$/)
+    require.context("./", false, /\.(png|jpg|jpeg)$/)
   );
 
   useEffect(() => {

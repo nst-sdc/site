@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Projectinsti.css";
-import instiapp from "./members_images/instiapp.jpg";
+import instiapp from "./InstiApp.png";
 import Connect from "./Connect";
 import NavBar from "./NavBar";
 
@@ -16,7 +16,7 @@ function Projectinsti() {
         <div className="project-box-head">
           <div className="project-logo">
             <div className="project-image">
-              <img className="project-image" src={instiapp} />
+              <img className="project-image" src={instiapp} alt="InstiApp" />
             </div>
             <div className="project-name">
               <p>InstiApp</p>

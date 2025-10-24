@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Projectinsti.css";
 import Connect from "./Connect";
 import NavBar from "./NavBar";
-import messi from "./members_images/messi.jpg";
+import messi from "./Mess I.png";
 
 function Projectmessi() {
   useEffect(() => {

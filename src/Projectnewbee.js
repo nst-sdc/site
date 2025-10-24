@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./Projectinsti.css";
 import Connect from "./Connect";
 import NavBar from "./NavBar";
-import newbee from "./members_images/newbee.jpg";
+import newbee from "./NewBee.png";
 
 function Projectnewbee() {
   useEffect(() => {
