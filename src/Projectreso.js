@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Projectinsti.css";
 import Connect from "./Connect";
 import NavBar from "./NavBar";
-import resobin from "./members_images/resobin.jpg";
+import resobin from "./Resobin_img.png";
 
 function Projectreso() {
   useEffect(() => {

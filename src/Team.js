@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Team.css";
-import ktm from "./members_images/knowtheteam.jpg";
+import ktm from "./About_img.png";
 
 function Team() {
   return (
