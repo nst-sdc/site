@@ -1,7 +1,7 @@
 
 ---
 
-#### ➤ Create `.github/ISSUE_TEMPLATE.md`
+####  Create `.github/ISSUE_TEMPLATE.md`
 Inside a `.github` folder (create if not exists):
 
 ```markdown
@@ -12,13 +12,13 @@ title: "[BUG] - "
 labels: bug
 ---
 
-### 🐞 Description
+###  Description
 A clear and concise description of what the bug is.
 
-### 🔁 Steps to Reproduce
+###  Steps to Reproduce
 1. Go to '...'
 2. Click on '...'
 3. See error
 
-### ✅ Expected behavior
+### Expected behavior
 A clear description of what you expected to happen.

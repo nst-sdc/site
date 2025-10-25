@@ -1,13 +1,13 @@
-### 🔧 Description
+###  Description
 Briefly describe your changes.
 
-### 🧩 Related Issue
+### Related Issue
 Fixes #<issue-number>
 
-### 🧪 Testing
+### Testing
 Steps to verify your changes work as expected.
 
-### ✅ Checklist
+### Checklist
 - [ ] Code compiles successfully
 - [ ] Tests pass locally
 - [ ] Docs updated

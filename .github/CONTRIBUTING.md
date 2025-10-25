@@ -1,8 +1,8 @@
 # Contributing Guidelines
 
-Thank you for considering contributing to this project! 🎉
+Thank you for considering contributing to this project! 
 
-## 🧩 How to Contribute
+## How to Contribute
 1. Fork this repository and clone it locally.
 2. Create a new branch for your fix or feature:
    ```bash
