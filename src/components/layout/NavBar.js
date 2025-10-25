@@ -28,28 +28,44 @@ function NavBar() {
     };
   }, []);
 
+  const handleToggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Escape' && isNavOpen) {
+      setIsNavOpen(false);
+    }
+  };
+
   return (
     <>
-      <div className="top-bar"></div>
+      <div className="top-bar" role="banner"></div>
       <div className="navbar-fixed">
         <nav
-          class="navbar navbar-expand-md"
+          className="navbar navbar-expand-md"
           style={{ backdropFilter: `blur(${blurAmount}px)` }}
+          role="navigation"
+          aria-label="Main navigation"
         >
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="/" aria-label="DevClub NST-Pune - Home">
               <span className="title">DevClub NST-Pune</span>
             </a>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup"
               aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              onClick={() => setIsNavOpen(!isNavOpen)}
+              aria-expanded={isNavOpen}
+              aria-label={isNavOpen ? "Close navigation menu" : "Open navigation menu"}
+              onClick={handleToggleNav}
+              onKeyDown={handleKeyDown}
             >
+              <span className="sr-only">
+                {isNavOpen ? "Close navigation menu" : "Open navigation menu"}
+              </span>
               {isNavOpen ? (
                 <svg
                   width="28"
@@ -57,6 +73,8 @@ function NavBar() {
                   viewBox="0 0 28 28"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
                 >
                   <path
                     d="M2.79997 28.0001L-3.05176e-05 25.2001L11.2 14.0001L-3.05176e-05 2.80006L2.79997 6.10352e-05L14 11.2001L25.2 6.10352e-05L28 2.80006L16.8 14.0001L28 25.2001L25.2 28.0001L14 16.8001L2.79997 28.0001Z"
@@ -70,8 +88,10 @@ function NavBar() {
                   viewBox="0 0 48 48"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
                 >
-                  <g clip-path="url(#clip0_825_211)">
+                  <g clipPath="url(#clip0_825_211)">
                     <path
                       d="M6 9.97949H42V13.9712H6V9.97949ZM6 21.9548H42V25.9465H6V21.9548ZM6 33.93H42V37.9218H6V33.93Z"
                       fill="#F2F2F2"
@@ -86,11 +106,12 @@ function NavBar() {
               )}
             </button>
             <div
-              class="collapse navbar-collapse"
+              className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}
               id="navbarNavAltMarkup"
               style={{
                 height: screenWidth < 768 && isNavOpen ? "100vh" : "auto",
               }}
+              aria-hidden={!isNavOpen}
             >
               <div
                 style={{
@@ -100,23 +121,63 @@ function NavBar() {
                   width: "100%",
                 }}
               >
-                <div class="navbar-nav">
-                  <RouterLink to="/#home" className="nav-link">
-                    Home
-                  </RouterLink>
-                  <RouterLink to="/#about" className="nav-link">
-                    About
-                  </RouterLink>
-                  <RouterLink to="/#projects" className="nav-link">
-                    Projects
-                  </RouterLink>
-                  <RouterLink to="/#team" className="nav-link">
-                    Team
-                  </RouterLink>
-                  <RouterLink to="/#connect" className="nav-link">
-                    Connect
-                  </RouterLink>
-                </div>
+                <ul className="navbar-nav" role="menubar">
+                  <li role="none">
+                    <RouterLink 
+                      to="/#home" 
+                      className="nav-link"
+                      role="menuitem"
+                      tabIndex={isNavOpen ? 0 : -1}
+                      aria-label="Navigate to Home section"
+                    >
+                      Home
+                    </RouterLink>
+                  </li>
+                  <li role="none">
+                    <RouterLink 
+                      to="/#about" 
+                      className="nav-link"
+                      role="menuitem"
+                      tabIndex={isNavOpen ? 0 : -1}
+                      aria-label="Navigate to About section"
+                    >
+                      About
+                    </RouterLink>
+                  </li>
+                  <li role="none">
+                    <RouterLink 
+                      to="/#projects" 
+                      className="nav-link"
+                      role="menuitem"
+                      tabIndex={isNavOpen ? 0 : -1}
+                      aria-label="Navigate to Projects section"
+                    >
+                      Projects
+                    </RouterLink>
+                  </li>
+                  <li role="none">
+                    <RouterLink 
+                      to="/#team" 
+                      className="nav-link"
+                      role="menuitem"
+                      tabIndex={isNavOpen ? 0 : -1}
+                      aria-label="Navigate to Team section"
+                    >
+                      Team
+                    </RouterLink>
+                  </li>
+                  <li role="none">
+                    <RouterLink 
+                      to="/#connect" 
+                      className="nav-link"
+                      role="menuitem"
+                      tabIndex={isNavOpen ? 0 : -1}
+                      aria-label="Navigate to Connect section"
+                    >
+                      Connect
+                    </RouterLink>
+                  </li>
+                </ul>
                 {/* <div className="devcom-svg-container">
                   <img src={DevComLogo} alt="Devcom Logo" />
                 </div> */}
