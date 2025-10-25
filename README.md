@@ -42,6 +42,8 @@ From late-night bugs to real-life glitches, we use technology and creativity to 
 - Node.js (v14 or higher)
 - npm or yarn
 
+> On Windows, see "Windows Setup" for Node/npm install, HTTPS dev certificates, and common `npm start` fixes: `docs/windows-setup.md`
+
 ### Setup
 
 1. **Clone the repository**
