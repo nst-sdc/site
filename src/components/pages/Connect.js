@@ -16,33 +16,21 @@ function Connect() {
           <div className="links">
             <div className="social-handles">
               <div className="social-media LinkedIn">
-                <a href="https://www.linkedin.com/company/devcom-iit-bombay/mycompany/">
+                <a href="https://www.linkedin.com/company/nst-sdc/?viewAsMember=true" target="blank">
                   LinkedIn
                 </a>
               </div>
               <div className="social-media Discord">
-                <a href="https://discord.gg/devclub-nst">Discord</a>
+                <a href="https://discord.gg/ucCuH2XQ" target="blank">Discord</a>
               </div>
               <div className="social-media Instagram">
-                <a href="https://www.instagram.com/devcom.iitb/">Instagram</a>
+                <a href="https://www.instagram.com/devclub.nst/" target="blank">Instagram</a>
               </div>
               <div className="social-media Mail">
-                <a href="mailto:devcom@iitb.ac.in">Mail</a>
+                <a href="support@nstsdc.org" target="blank">Mail</a>
               </div>
             </div>
             <div className="project-handles">
-              <div className="projects-link InstiApp">
-                <a href="https://insti.app/feed">InstiApp</a>
-              </div>
-              <div className="projects-link Resobin">
-                <a href="https://resobin.gymkhana.iitb.ac.in/">Resobin</a>
-              </div>
-              <div className="projects-link Mess-I">
-                <a href="https://instamess.gymkhana.iitb.ac.in/">Mess-I</a>
-              </div>
-              <div className="projects-link NewBee">
-                <a href="https://gymkhana.iitb.ac.in/newbee/">NewBee</a>
-              </div>
             </div>
           </div>
           <div className="remark-box">
@@ -51,9 +39,9 @@ function Connect() {
             </p>
           </div>
         </div>
-        <div className="row connect-section-footer">
+        {/* <div className="row connect-section-footer">
           <img className="dc-logo" src={logo} alt="DevClub NST-Pune logo" />
-        </div>
+        </div> */}
       </div>
     </div>
   );
