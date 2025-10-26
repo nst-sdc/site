@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/pages/Connect.css";
-import logo from "../../assets/images/DC_logo.png";
+import LINKS from "../../assets/data/links";
 
 function Connect() {
   return (
@@ -16,18 +16,18 @@ function Connect() {
           <div className="links">
             <div className="social-handles">
               <div className="social-media LinkedIn">
-                <a href="https://www.linkedin.com/company/nst-sdc/?viewAsMember=true" target="blank">
+                <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
               </div>
               <div className="social-media Discord">
-                <a href="https://discord.gg/ucCuH2XQ" target="blank">Discord</a>
+                <a href={LINKS.discord} target="_blank" rel="noopener noreferrer">Discord</a>
               </div>
               <div className="social-media Instagram">
-                <a href="https://www.instagram.com/devclub.nst/" target="blank">Instagram</a>
+                <a href={LINKS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
               </div>
               <div className="social-media Mail">
-                <a href="support@nstsdc.org" target="blank">Mail</a>
+                <a href={LINKS.email}>Mail</a>
               </div>
             </div>
             <div className="project-handles">
