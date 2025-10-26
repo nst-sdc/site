@@ -1,26 +1,45 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../../styles/pages/Projects.css";
-import resobin from "../../assets/images/ResoBin.png";
-import messi from "../../assets/images/Mess I.png";
-import instiapp from "../../assets/images/InstiApp.png";
-import newbee from "../../assets/images/NewBee.png";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import useElementOnScreen from "../../hooks/useElementOnScreen";
+import { fetchTopRepositories } from "../../services/githubApi";
 
 function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [projectsData, setProjectsData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const projectsContainerRef = useRef(null);
   const scrollingRef = useRef({ isScrolling: false });
-  const projectsCount = 4; // Total number of projects
+  const projectsCount = projectsData.length;
   
   // Use our custom hook to detect when projects section is visible
   const [sectionRef] = useElementOnScreen({
     threshold: 0.4,
     reappear: true
   });
+  
+  // Fetch repositories from GitHub on component mount
+  useEffect(() => {
+    const loadProjects = async () => {
+      try {
+        setLoading(true);
+        const repos = await fetchTopRepositories(10);
+        setProjectsData(repos);
+        setError(null);
+      } catch (err) {
+        setError('Failed to load projects. Please try again later.');
+        console.error('Error loading projects:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    loadProjects();
+  }, []);
   
   // Make sure body scroll is never locked
   useEffect(() => {
@@ -108,36 +127,6 @@ function Projects() {
     };
   }, [activeIndex, isAnimating, projectsCount]);
 
-  const projectsData = [
-    { 
-      id: 0, 
-      title: "ResoBin", 
-      imgSrc: resobin, 
-      link: "/resobin",
-      description: "A comprehensive resource sharing platform designed to streamline information exchange within the campus community. Access study materials, notes, and resources with ease."
-    },
-    { 
-      id: 1, 
-      title: "InstiApp", 
-      imgSrc: instiapp, 
-      link: "/instiapp",
-      description: "Your all-in-one campus companion that provides real-time updates, event notifications, and essential services to enhance your institute experience and keep you connected."
-    },
-    { 
-      id: 2, 
-      title: "Mess-I", 
-      imgSrc: messi, 
-      link: "/messi",
-      description: "An intelligent mess management system that optimizes food service operations, reduces waste, and improves the dining experience through digital menu planning and feedback."
-    },
-    { 
-      id: 3, 
-      title: "NewBee", 
-      imgSrc: newbee, 
-      link: "/newbee",
-      description: "A seamless onboarding platform that guides new students through their transition to campus life with personalized orientations, resources, and community connections."
-    },
-  ];
 
   const slideVariants = {
     enter: (direction) => ({
@@ -164,6 +153,54 @@ function Projects() {
   };
 
   // We're removing the wave animation since it's causing issues
+  
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="container project-container">
+        <div className="row project-head">
+          <div className="project">
+            <p className="projects">Projects</p>
+          </div>
+        </div>
+        <div className="row project-body" style={{ justifyContent: 'center', alignItems: 'center', minHeight: '400px' }}>
+          <p style={{ color: '#f2f2f2', fontSize: '1.2rem' }}>Loading projects...</p>
+        </div>
+      </div>
+    );
+  }
+  
+  // Show error state
+  if (error) {
+    return (
+      <div className="container project-container">
+        <div className="row project-head">
+          <div className="project">
+            <p className="projects">Projects</p>
+          </div>
+        </div>
+        <div className="row project-body" style={{ justifyContent: 'center', alignItems: 'center', minHeight: '400px' }}>
+          <p style={{ color: '#f2f2f2', fontSize: '1.2rem' }}>{error}</p>
+        </div>
+      </div>
+    );
+  }
+  
+  // Show empty state
+  if (projectsData.length === 0) {
+    return (
+      <div className="container project-container">
+        <div className="row project-head">
+          <div className="project">
+            <p className="projects">Projects</p>
+          </div>
+        </div>
+        <div className="row project-body" style={{ justifyContent: 'center', alignItems: 'center', minHeight: '400px' }}>
+          <p style={{ color: '#f2f2f2', fontSize: '1.2rem' }}>No projects found.</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div 
@@ -279,18 +316,18 @@ function Projects() {
             >
               <div className="project-content">
                 <motion.div 
-                  className="project-title-box"
+                  className="project-header-section"
                   initial={{ 
                     opacity: 0, 
-                    x: direction > 0 ? 40 : -40
+                    y: 20
                   }}
                   animate={{ 
                     opacity: 1, 
-                    x: 0
+                    y: 0
                   }}
                   transition={{ delay: 0.1, duration: 0.4 }}
                 >
-                    <motion.div 
+                  <motion.div 
                     className="project-tags"
                     initial={{ 
                       opacity: 0, 
@@ -302,69 +339,82 @@ function Projects() {
                     }}
                     transition={{ delay: 0.05, duration: 0.3 }}
                   >
-                    {activeIndex === 0 && <span className="project-tag tech">React</span>}
-                    {activeIndex === 1 && <span className="project-tag tech">Flutter</span>}
-                    {activeIndex === 2 && <span className="project-tag tech">Node.js</span>}
-                    {activeIndex === 3 && <span className="project-tag tech">React Native</span>}
-                  </motion.div>                  <h2 className="project-title">{projectsData[activeIndex].title}</h2>
-                  <p className="project-description">{projectsData[activeIndex].description}</p>
-                  
-                  <motion.div 
-                    className="tech-stack"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 0.7 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    {activeIndex === 0 && "React • Firebase • Material UI"}
-                    {activeIndex === 1 && "Flutter • Dart • Firebase"}
-                    {activeIndex === 2 && "Node.js • Express • MongoDB"}
-                    {activeIndex === 3 && "React Native • Redux • API Integration"}
+                    {projectsData[activeIndex].language && (
+                      <span className="project-tag tech">{projectsData[activeIndex].language}</span>
+                    )}
+                    {projectsData[activeIndex].topics && projectsData[activeIndex].topics.slice(0, 2).map((topic, idx) => (
+                      <span key={idx} className="project-tag">{topic}</span>
+                    ))}
                   </motion.div>
+                  
+                  <h2 className="project-title">{projectsData[activeIndex].title}</h2>
+                  <p className="project-description">{projectsData[activeIndex].description}</p>
                 </motion.div>
                 
-                <Link to={projectsData[activeIndex].link} className="project-link">
-                  <motion.div 
-                    className="project-image-box"
-                    initial={{ 
-                      opacity: 0, 
-                      scale: 0.9,
-                      x: direction > 0 ? 50 : -50
-                    }}
-                    animate={{ 
-                      opacity: 1, 
-                      scale: 1, 
-                      x: 0
-                    }}
-                    transition={{ 
-                      delay: 0.2,
-                      duration: 0.4
-                    }}
-                  >
-                    <img
-                      className="project-img"
-                      src={projectsData[activeIndex].imgSrc}
-                      alt={`${projectsData[activeIndex].title} logo`}
-                    />
-                  </motion.div>
+                <motion.div 
+                  className="project-stats-grid"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.4 }}
+                >
+                  <div className="stat-card">
+                    <div className="stat-icon">⭐</div>
+                    <div className="stat-info">
+                      <div className="stat-value">{projectsData[activeIndex].stars}</div>
+                      <div className="stat-label">Stars</div>
+                    </div>
+                  </div>
                   
-                  <motion.div 
-                    className="project-explore"
-                    initial={{ 
-                      opacity: 0, 
-                      x: direction > 0 ? 20 : -20 
-                    }}
-                    animate={{ 
-                      opacity: 1, 
-                      x: 0 
-                    }}
-                    transition={{ delay: 0.3, duration: 0.4 }}
-                  >
-                    <span>Explore</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                  <div className="stat-card">
+                    <div className="stat-icon">🔱</div>
+                    <div className="stat-info">
+                      <div className="stat-value">{projectsData[activeIndex].forks}</div>
+                      <div className="stat-label">Forks</div>
+                    </div>
+                  </div>
+                  
+                  <div className="stat-card">
+                    <div className="stat-icon">🐛</div>
+                    <div className="stat-info">
+                      <div className="stat-value">{projectsData[activeIndex].openIssues}</div>
+                      <div className="stat-label">Issues</div>
+                    </div>
+                  </div>
+                  
+                  <div className="stat-card">
+                    <div className="stat-icon">👁️</div>
+                    <div className="stat-info">
+                      <div className="stat-value">{projectsData[activeIndex].watchers}</div>
+                      <div className="stat-label">Watchers</div>
+                    </div>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="project-actions"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.4 }}
+                >
+                  <Link to={projectsData[activeIndex].link} className="action-btn primary">
+                    <span>View Details</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
                       <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
                     </svg>
-                  </motion.div>
-                </Link>
+                  </Link>
+                  
+                  <a 
+                    href={projectsData[activeIndex].githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="action-btn secondary"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                      <path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z" />
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                </motion.div>
               </div>
               </motion.div>
             </motion.div>

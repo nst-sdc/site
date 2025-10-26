@@ -5,10 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Homepage from "./components/pages/Homepage";
 import OurTeam from "./components/pages/ourTeam";
-import Projectreso from "./components/pages/Projectreso";
-import Projectinsti from "./components/pages/Projectinsti";
-import Projectmessi from "./components/pages/Projectmessi";
-import Projectnewbee from "./components/pages/Projectnewbee";
+import ProjectDetail from "./components/pages/ProjectDetail";
 
 function App() {
   useEffect(() => {
@@ -26,10 +23,7 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/ourteam" element={<OurTeam />} />
-          <Route path="/resobin" element={<Projectreso />} />
-          <Route path="/instiapp" element={<Projectinsti />} />
-          <Route path="/messi" element={<Projectmessi />} />
-          <Route path="/newbee" element={<Projectnewbee />} />
+          <Route path="/project/:repoName" element={<ProjectDetail />} />
         </Routes>
       </BrowserRouter>
     </>
