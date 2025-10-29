@@ -1,8 +1,8 @@
-# DevClub NST-SDC Pune 🚀
+# DevClub NST-SDC Pune
 
 Official website for the Student Developer Community at NST-SDC Pune. We're a crew of developers and designers who build tech solutions to make student life smoother, smarter, and more engaging.
 
-## 🌟 About
+## About
 
 **NST-SDC** is a student-driven community focused on:
 - Building real-world tech solutions for campus problems
@@ -15,7 +15,7 @@ Official website for the Student Developer Community at NST-SDC Pune. We're a cr
 
 From late-night bugs to real-life glitches, we use technology and creativity to solve problems that matter to students.
 
-## ✨ Features
+## Features
 
 - **Modern React Architecture**: Built with React 18 and React Router for seamless navigation
 - **Smooth Animations**: Powered by Framer Motion and AOS (Animate On Scroll)
@@ -24,7 +24,7 @@ From late-night bugs to real-life glitches, we use technology and creativity to 
 - **Team Section**: Meet the developers and designers behind NST-SDC
 - **Interactive UI**: Engaging user experience with scroll-based animations
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend Framework**: React 18.2.0
 - **Routing**: React Router DOM 6.14.2
@@ -36,7 +36,7 @@ From late-night bugs to real-life glitches, we use technology and creativity to 
 - **Styling**: Custom CSS with responsive design
 - **Package Manager**: npm
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -62,7 +62,7 @@ From late-night bugs to real-life glitches, we use technology and creativity to 
 
    The app will open at [http://localhost:3000](http://localhost:3000)
 
-## 📜 Available Scripts
+## Available Scripts
 
 ### `npm start`
 Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
@@ -78,10 +78,10 @@ Builds the app for production to the `build` folder
 - Ready for deployment
 
 ### `npm run eject`
-⚠️ **Note: This is a one-way operation!**
+**Note: This is a one-way operation!**
 Ejects from Create React App for full configuration control
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 site/
@@ -110,14 +110,14 @@ site/
 └── README.md
 ```
 
-## 🎯 Key Projects Featured
+## Key Projects Featured
 
 - **ResoBin** - Resource management platform
 - **InstiApp** - Institute application
 - **Messi** - Event management system
 - **NewBee** - Onboarding platform for freshers
 
-## 👥 Our Team
+## Our Team
 
 Meet the passionate developers and designers who make NST-SDC possible:
 - **Daksh Saini** - [GitHub](https://github.com/mrgear111) | [LinkedIn](https://www.linkedin.com/in/daksh-saini-70a68830a/)
@@ -127,14 +127,14 @@ Meet the passionate developers and designers who make NST-SDC possible:
 - **Abhay** - [GitHub](https://github.com/QUBITABHAY) | [LinkedIn](https://www.linkedin.com/in/qubitabhay/)
 - **Chiranjeev Agarwal** - [GitHub](https://github.com/CHIRANJEEV1707) | [LinkedIn](https://www.linkedin.com/in/chiranjeev-agarwal-4bb65631a/)
 
-## 🎨 Design Philosophy
+## Design Philosophy
 
 - **User-Centric**: Every feature is designed with student needs in mind
 - **Modern & Clean**: Minimalist design with purposeful animations
 - **Performance First**: Optimized for fast loading and smooth interactions
 - **Accessibility**: Ensuring everyone can use our platforms
 
-## 🚀 Deployment
+## Deployment
 
 ### Build for Production
 ```bash
@@ -147,7 +147,7 @@ The optimized production build will be in the `build/` folder, ready to deploy t
 - Vercel
 - Any static hosting service
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the community! Here's how you can help:
 
@@ -157,30 +157,30 @@ We welcome contributions from the community! Here's how you can help:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is private and maintained by NST-SDC Pune.
 
-## 📞 Connect With Us
+## Connect With Us
 
 Want to collaborate or learn more about NST-SDC?
 - Visit our [website](http://localhost:3000)
 - Check out our projects section
 - Reach out through the Connect page
 
-## 🐛 Known Issues
+## Known Issues
 
 If you encounter any issues:
 1. Clear `node_modules` and `package-lock.json`
 2. Run `npm install` again
 3. Ensure you're using Node.js v14 or higher
 
-## 💡 What We Build
+## What We Build
 
 From creating event platforms like **Skillfest** (recruitment leaderboard) and **Quick Snatch** (treasure hunt experience), to building websites, apps, and tools that simplify student life — we blend creativity with code to make college smarter, smoother, and more fun.
 
 ---
 
-**Build Cool Stuff** 💻✨
+**Build Cool Stuff**
 
-*Made with ❤️ by the NST-SDC Team*
+*Made with by the NST-SDC Team*
