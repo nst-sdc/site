@@ -113,6 +113,9 @@ function NavBar() {
                   <RouterLink to="/#team" className="nav-link">
                     Team
                   </RouterLink>
+                  <RouterLink to="/members" className="nav-link">
+                    Members
+                  </RouterLink>
                   <RouterLink to="/#connect" className="nav-link">
                     Connect
                   </RouterLink>

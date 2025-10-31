@@ -79,3 +79,83 @@ export const fetchRepositoryDetails = async (repoName) => {
     throw error;
   }
 };
+
+export const fetchOrganizationMembers = async () => {
+  try {
+    const response = await fetch(`https://api.github.com/orgs/${GITHUB_ORG}/members?per_page=100`);
+    
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status}`);
+    }
+    
+    const members = await response.json();
+    
+    const memberDetailsPromises = members.map(async (member) => {
+      try {
+        const userResponse = await fetch(`https://api.github.com/users/${member.login}`);
+        if (!userResponse.ok) {
+          return {
+            id: member.id,
+            login: member.login,
+            avatar_url: member.avatar_url,
+            html_url: member.html_url,
+            name: null,
+            bio: null
+          };
+        }
+        const userData = await userResponse.json();
+        return {
+          id: userData.id,
+          login: userData.login,
+          avatar_url: userData.avatar_url,
+          html_url: userData.html_url,
+          name: userData.name,
+          bio: null
+        };
+      } catch (error) {
+        console.error(`Error fetching details for ${member.login}:`, error);
+        return {
+          id: member.id,
+          login: member.login,
+          avatar_url: member.avatar_url,
+          html_url: member.html_url,
+          name: null,
+          bio: null
+        };
+      }
+    });
+    
+    return await Promise.all(memberDetailsPromises);
+  } catch (error) {
+    console.error('Error fetching organization members:', error);
+    throw error;
+  }
+};
+
+export const fetchUserDetails = async (username) => {
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}`);
+    
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status}`);
+    }
+    
+    const userData = await response.json();
+    return {
+      id: userData.id,
+      login: userData.login,
+      avatar_url: userData.avatar_url,
+      html_url: userData.html_url,
+      name: userData.name || userData.login,
+      bio: userData.bio,
+      company: userData.company,
+      location: userData.location,
+      twitter_username: userData.twitter_username,
+      public_repos: userData.public_repos,
+      followers: userData.followers
+    };
+  } catch (error) {
+    console.error(`Error fetching user details for ${username}:`, error);
+    throw error;
+  }
+};

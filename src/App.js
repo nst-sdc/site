@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import Homepage from "./components/pages/Homepage";
 import OurTeam from "./components/pages/ourTeam";
 import ProjectDetail from "./components/pages/ProjectDetail";
+import Members from "./components/pages/Members";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/ourteam" element={<OurTeam />} />
+          <Route path="/members" element={<Members />} />
           <Route path="/project/:repoName" element={<ProjectDetail />} />
         </Routes>
       </BrowserRouter>

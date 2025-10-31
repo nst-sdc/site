@@ -1,0 +1,149 @@
+.outer-members-container {
+  width: 77%;
+  margin-left: 11.5%;
+  padding: 0px;
+  margin-top: 10.5%;
+  margin-bottom: 48px;
+}
+
+.members-head-section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.members-heading {
+  width: 100%;
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.members-headings {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  color: #f2f2f2;
+  margin: 0;
+}
+
+.members-content {
+  width: 100%;
+  height: auto;
+}
+
+.members-contents {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  color: #afb9cc;
+  margin: 0;
+}
+
+.members-body-section {
+  width: 100%;
+  min-height: 400px;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+.members-loading,
+.members-error,
+.members-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  width: 100%;
+}
+
+.members-loading p,
+.members-error p,
+.members-empty p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #afb9cc;
+  margin: 0;
+}
+
+.members-error p {
+  color: #ff6b6b;
+}
+
+@media (max-width: 1200px) {
+  .members-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .outer-members-container {
+    margin-left: 6%;
+    width: 88%;
+    padding-top: 34.5%;
+    margin-bottom: 32px;
+  }
+
+  .members-heading {
+    height: auto;
+  }
+
+  .members-headings {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .members-content {
+    height: auto;
+  }
+
+  .members-contents {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .members-head-section {
+    margin-bottom: 32px;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .members-loading p,
+  .members-error p,
+  .members-empty p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .members-headings {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .members-contents {
+    font-size: 14px;
+  }
+
+  .members-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 330px) {
+  .members-headings {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}

@@ -1,0 +1,123 @@
+.member-card {
+  background-color: #0a0a08;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+  min-height: 280px;
+}
+
+.member-card:hover {
+  background-color: #1a1a18;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.member-card-image-container {
+  margin-bottom: 16px;
+}
+
+.member-card-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+.member-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.member-card-name {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #f2f2f2;
+  margin: 0 0 8px 0;
+}
+
+.member-card-username {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #afb9cc;
+  margin: 0 0 12px 0;
+}
+
+.member-card-bio {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #afb9cc;
+  margin: 0 0 16px 0;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-card-button {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0a0a08;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: auto;
+}
+
+.member-card-button:hover {
+  color:rgb(153, 153, 153);
+  background-color: #f2f2f2;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .member-card {
+    padding: 20px;
+    min-height: 280px;
+  }
+
+  .member-card-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .member-card-name {
+    font-size: 18px;
+  }
+
+  .member-card-username {
+    font-size: 13px;
+  }
+
+  .member-card-bio {
+    font-size: 13px;
+  }
+
+  .member-card-button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
